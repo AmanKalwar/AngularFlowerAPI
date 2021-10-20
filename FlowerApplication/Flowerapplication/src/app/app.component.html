@@ -1,0 +1,31 @@
+<!-- <div class="container"> 
+  <div class="row">
+      <app-flower class="col-4"> </app-flower>
+    <app-flowerorder class="col-4"></app-flowerorder>
+    <app-summary></app-summary>
+    <app-register></app-register>
+    <!-- <app-summury class="col-4"></app-summury> -->
+  <!-- </div>
+</div> --> 
+
+<div>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Flowers</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <!-- <li class="active"><a href="#">Home</a></li> -->
+      <li><a  routerLink="login">Login</a></li>
+      <li><a  routerLink="register">Register</a></li>
+      <li><a  routerLink="flower"> Add Flower</a></li>
+      <li><a routerLink="flowerorder">Items</a></li>
+      <li><a  routerLink="summary" >Cart</a></li>
+     
+    </ul>
+  </div>
+</nav>
+</div>
+<div>
+    <router-outlet></router-outlet>
+</div>

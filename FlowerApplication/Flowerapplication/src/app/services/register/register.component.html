@@ -1,0 +1,49 @@
+
+<html>
+    <head>
+        <style>
+            /* body { 
+              background-image: url('../assets/images/pexels-photo-414660.jpeg');
+              background-repeat: no-repeat;
+              background-attachment: fixed;
+              background-size: cover;
+            } */
+            </style> 
+
+    </head>
+    <body >
+        
+        <div class="container">
+       <span class="form"> 
+        <div class="alert alert-success">
+            <form [formGroup]="myForm" (ngSubmit)="register()"> 
+            <label class="form-control">ID</label>
+            <input type="text" class="form-control"   [(ngModel)]="user.id"  [formControl]="id" >
+            <span *ngIf="id.valid==false && id.touched" class="alert alert-danger">
+                Id cannot be empty
+            </span>
+            <label class="form-control">Password</label>
+            <input type="password" class="form-control" [(ngModel)]="user.password" [formControl]="pass" >
+            <span *ngIf="pass.valid==false && pass.touched" class="alert alert-danger">
+                password cannot be empty
+            </span>
+
+            <label class="form-control">Re-Type Password</label>
+            <input type="password" class="form-control" [(ngModel)]="rePassword" [formControl]="repass" >
+            <span *ngIf="repass.valid==false && repass.touched" class="alert alert-danger">
+                Confirm password
+            </span>
+            <label class="form-control">Username</label>
+            <input type="text" class="form-control" [(ngModel)]="user.name" [formControl]="name" > 
+            <span *ngIf="name.valid==false && name.touched" class="alert alert-danger">
+                Name cannot be empty
+            </span>
+            <button class="btn btn-success" >Register</button>
+        </form>
+        </div>
+    </span>
+    
+    </div>
+    </body>
+</html>
+

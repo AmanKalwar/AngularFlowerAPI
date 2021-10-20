@@ -1,0 +1,19 @@
+
+<div class="wrapper alert alert-success">   
+    <div class="alert alert-info" *ngFor = "let flower of flowerss">
+                <!-- <div *ngIf="flower.available ; else elseBlock"> -->
+                Flower Id : {{flower.id}}
+                <br/>
+                Flower Name : {{flower.name}}
+                 <br/>
+                 Flower Description : {{flower.description}} 
+                <br/>
+                Flower Price : {{flower.price}}
+                <br/>
+                Flower Quantity : {{ flower.qty}}
+                
+                <button class="btn btn-primary" (click)="AddFlowers(flower)">Add</button>
+        <!-- </div> -->
+    </div>
+    <ng-template #elseBlock>Out of stock</ng-template>
+</div>
